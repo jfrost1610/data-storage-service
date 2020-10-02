@@ -6,6 +6,12 @@ kafka:
 spring:
   application:
     name: document-service
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAPSERVERS}
+    schema-registry: ${SPRING_KAFKA_SCHEMA_REGISTRY}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializer
     
 server:
   port: 8081

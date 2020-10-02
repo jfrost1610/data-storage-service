@@ -25,7 +25,7 @@ public class DocumentService {
 
 	public void addDataToDocument(String fileType, List<DataModel> datas) {
 		DocumentDetails newDocument = DocumentDetails.builder().type(fileType).datas(datas).build();
-		log.info("Publishing Create Message to topc.");
+		log.info("Publishing Create Message to topic.");
 		publisher.create(newDocument);
 
 	}

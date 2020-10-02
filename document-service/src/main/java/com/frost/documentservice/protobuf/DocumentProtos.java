@@ -14,8 +14,8 @@ public final class DocumentProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface DocumentDetailsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.frost.documentservice.protobuf.DocumentDetails)
+  public interface DocumentDetailsProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.frost.documentservice.protobuf.DocumentDetailsProto)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -37,27 +37,27 @@ public final class DocumentProtos {
         getTypeBytes();
 
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
-    java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModel> 
+    java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModelProto> 
         getDatasList();
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
-    com.frost.documentservice.protobuf.DocumentProtos.DataModel getDatas(int index);
+    com.frost.documentservice.protobuf.DocumentProtos.DataModelProto getDatas(int index);
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
     int getDatasCount();
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
-    java.util.List<? extends com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder> 
+    java.util.List<? extends com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder> 
         getDatasOrBuilderList();
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
-    com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder getDatasOrBuilder(
+    com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder getDatasOrBuilder(
         int index);
 
     /**
@@ -86,18 +86,18 @@ public final class DocumentProtos {
         getHeadersBytes(int index);
   }
   /**
-   * Protobuf type {@code com.frost.documentservice.protobuf.DocumentDetails}
+   * Protobuf type {@code com.frost.documentservice.protobuf.DocumentDetailsProto}
    */
-  public  static final class DocumentDetails extends
+  public  static final class DocumentDetailsProto extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.frost.documentservice.protobuf.DocumentDetails)
-      DocumentDetailsOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.frost.documentservice.protobuf.DocumentDetailsProto)
+      DocumentDetailsProtoOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use DocumentDetails.newBuilder() to construct.
-    private DocumentDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use DocumentDetailsProto.newBuilder() to construct.
+    private DocumentDetailsProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private DocumentDetails() {
+    private DocumentDetailsProto() {
       type_ = "";
       datas_ = java.util.Collections.emptyList();
       headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -107,7 +107,7 @@ public final class DocumentProtos {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new DocumentDetails();
+      return new DocumentDetailsProto();
     }
 
     @java.lang.Override
@@ -115,7 +115,7 @@ public final class DocumentProtos {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DocumentDetails(
+    private DocumentDetailsProto(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -147,11 +147,11 @@ public final class DocumentProtos {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                datas_ = new java.util.ArrayList<com.frost.documentservice.protobuf.DocumentProtos.DataModel>();
+                datas_ = new java.util.ArrayList<com.frost.documentservice.protobuf.DocumentProtos.DataModelProto>();
                 mutable_bitField0_ |= 0x00000001;
               }
               datas_.add(
-                  input.readMessage(com.frost.documentservice.protobuf.DocumentProtos.DataModel.parser(), extensionRegistry));
+                  input.readMessage(com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.parser(), extensionRegistry));
               break;
             }
             case 34: {
@@ -190,15 +190,15 @@ public final class DocumentProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetails_descriptor;
+      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetails_fieldAccessorTable
+      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.class, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder.class);
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.class, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder.class);
     }
 
     public static final int SIZE_FIELD_NUMBER = 1;
@@ -248,36 +248,36 @@ public final class DocumentProtos {
     }
 
     public static final int DATAS_FIELD_NUMBER = 3;
-    private java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModel> datas_;
+    private java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModelProto> datas_;
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
-    public java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModel> getDatasList() {
+    public java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModelProto> getDatasList() {
       return datas_;
     }
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
-    public java.util.List<? extends com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder> 
+    public java.util.List<? extends com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder> 
         getDatasOrBuilderList() {
       return datas_;
     }
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
     public int getDatasCount() {
       return datas_.size();
     }
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
-    public com.frost.documentservice.protobuf.DocumentProtos.DataModel getDatas(int index) {
+    public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto getDatas(int index) {
       return datas_.get(index);
     }
     /**
-     * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+     * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
      */
-    public com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder getDatasOrBuilder(
+    public com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder getDatasOrBuilder(
         int index) {
       return datas_.get(index);
     }
@@ -381,10 +381,10 @@ public final class DocumentProtos {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails)) {
+      if (!(obj instanceof com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto)) {
         return super.equals(obj);
       }
-      com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails other = (com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails) obj;
+      com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto other = (com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto) obj;
 
       if (getSize()
           != other.getSize()) return false;
@@ -422,69 +422,69 @@ public final class DocumentProtos {
       return hash;
     }
 
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(byte[] data)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(java.io.InputStream input)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseDelimitedFrom(java.io.InputStream input)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseDelimitedFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -497,7 +497,7 @@ public final class DocumentProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails prototype) {
+    public static Builder newBuilder(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -513,26 +513,26 @@ public final class DocumentProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code com.frost.documentservice.protobuf.DocumentDetails}
+     * Protobuf type {@code com.frost.documentservice.protobuf.DocumentDetailsProto}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.frost.documentservice.protobuf.DocumentDetails)
-        com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.frost.documentservice.protobuf.DocumentDetailsProto)
+        com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetails_descriptor;
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetails_fieldAccessorTable
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.class, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder.class);
+                com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.class, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder.class);
       }
 
-      // Construct using com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.newBuilder()
+      // Construct using com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -569,17 +569,17 @@ public final class DocumentProtos {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetails_descriptor;
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_descriptor;
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getDefaultInstanceForType() {
-        return com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.getDefaultInstance();
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getDefaultInstanceForType() {
+        return com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails build() {
-        com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails result = buildPartial();
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto build() {
+        com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -587,8 +587,8 @@ public final class DocumentProtos {
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails buildPartial() {
-        com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails result = new com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails(this);
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto buildPartial() {
+        com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto result = new com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto(this);
         int from_bitField0_ = bitField0_;
         result.size_ = size_;
         result.type_ = type_;
@@ -644,16 +644,16 @@ public final class DocumentProtos {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails) {
-          return mergeFrom((com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails)other);
+        if (other instanceof com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto) {
+          return mergeFrom((com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails other) {
-        if (other == com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto other) {
+        if (other == com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.getDefaultInstance()) return this;
         if (other.getSize() != 0) {
           setSize(other.getSize());
         }
@@ -712,11 +712,11 @@ public final class DocumentProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails parsedMessage = null;
+        com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails) e.getUnfinishedMessage();
+          parsedMessage = (com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -833,22 +833,22 @@ public final class DocumentProtos {
         return this;
       }
 
-      private java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModel> datas_ =
+      private java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModelProto> datas_ =
         java.util.Collections.emptyList();
       private void ensureDatasIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          datas_ = new java.util.ArrayList<com.frost.documentservice.protobuf.DocumentProtos.DataModel>(datas_);
+          datas_ = new java.util.ArrayList<com.frost.documentservice.protobuf.DocumentProtos.DataModelProto>(datas_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.frost.documentservice.protobuf.DocumentProtos.DataModel, com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder, com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder> datasBuilder_;
+          com.frost.documentservice.protobuf.DocumentProtos.DataModelProto, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder> datasBuilder_;
 
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModel> getDatasList() {
+      public java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModelProto> getDatasList() {
         if (datasBuilder_ == null) {
           return java.util.Collections.unmodifiableList(datas_);
         } else {
@@ -856,7 +856,7 @@ public final class DocumentProtos {
         }
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public int getDatasCount() {
         if (datasBuilder_ == null) {
@@ -866,9 +866,9 @@ public final class DocumentProtos {
         }
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DataModel getDatas(int index) {
+      public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto getDatas(int index) {
         if (datasBuilder_ == null) {
           return datas_.get(index);
         } else {
@@ -876,10 +876,10 @@ public final class DocumentProtos {
         }
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public Builder setDatas(
-          int index, com.frost.documentservice.protobuf.DocumentProtos.DataModel value) {
+          int index, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto value) {
         if (datasBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -893,10 +893,10 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public Builder setDatas(
-          int index, com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder builderForValue) {
+          int index, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder builderForValue) {
         if (datasBuilder_ == null) {
           ensureDatasIsMutable();
           datas_.set(index, builderForValue.build());
@@ -907,9 +907,9 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public Builder addDatas(com.frost.documentservice.protobuf.DocumentProtos.DataModel value) {
+      public Builder addDatas(com.frost.documentservice.protobuf.DocumentProtos.DataModelProto value) {
         if (datasBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -923,10 +923,10 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public Builder addDatas(
-          int index, com.frost.documentservice.protobuf.DocumentProtos.DataModel value) {
+          int index, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto value) {
         if (datasBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -940,10 +940,10 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public Builder addDatas(
-          com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder builderForValue) {
+          com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder builderForValue) {
         if (datasBuilder_ == null) {
           ensureDatasIsMutable();
           datas_.add(builderForValue.build());
@@ -954,10 +954,10 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public Builder addDatas(
-          int index, com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder builderForValue) {
+          int index, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder builderForValue) {
         if (datasBuilder_ == null) {
           ensureDatasIsMutable();
           datas_.add(index, builderForValue.build());
@@ -968,10 +968,10 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public Builder addAllDatas(
-          java.lang.Iterable<? extends com.frost.documentservice.protobuf.DocumentProtos.DataModel> values) {
+          java.lang.Iterable<? extends com.frost.documentservice.protobuf.DocumentProtos.DataModelProto> values) {
         if (datasBuilder_ == null) {
           ensureDatasIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -983,7 +983,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public Builder clearDatas() {
         if (datasBuilder_ == null) {
@@ -996,7 +996,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
       public Builder removeDatas(int index) {
         if (datasBuilder_ == null) {
@@ -1009,16 +1009,16 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder getDatasBuilder(
+      public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder getDatasBuilder(
           int index) {
         return getDatasFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder getDatasOrBuilder(
+      public com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder getDatasOrBuilder(
           int index) {
         if (datasBuilder_ == null) {
           return datas_.get(index);  } else {
@@ -1026,9 +1026,9 @@ public final class DocumentProtos {
         }
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public java.util.List<? extends com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder> 
+      public java.util.List<? extends com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder> 
            getDatasOrBuilderList() {
         if (datasBuilder_ != null) {
           return datasBuilder_.getMessageOrBuilderList();
@@ -1037,33 +1037,33 @@ public final class DocumentProtos {
         }
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder addDatasBuilder() {
+      public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder addDatasBuilder() {
         return getDatasFieldBuilder().addBuilder(
-            com.frost.documentservice.protobuf.DocumentProtos.DataModel.getDefaultInstance());
+            com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder addDatasBuilder(
+      public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder addDatasBuilder(
           int index) {
         return getDatasFieldBuilder().addBuilder(
-            index, com.frost.documentservice.protobuf.DocumentProtos.DataModel.getDefaultInstance());
+            index, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.frost.documentservice.protobuf.DataModel datas = 3;</code>
+       * <code>repeated .com.frost.documentservice.protobuf.DataModelProto datas = 3;</code>
        */
-      public java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder> 
+      public java.util.List<com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder> 
            getDatasBuilderList() {
         return getDatasFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.frost.documentservice.protobuf.DocumentProtos.DataModel, com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder, com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder> 
+          com.frost.documentservice.protobuf.DocumentProtos.DataModelProto, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder> 
           getDatasFieldBuilder() {
         if (datasBuilder_ == null) {
           datasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.frost.documentservice.protobuf.DocumentProtos.DataModel, com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder, com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder>(
+              com.frost.documentservice.protobuf.DocumentProtos.DataModelProto, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder>(
                   datas_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -1195,48 +1195,48 @@ public final class DocumentProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.frost.documentservice.protobuf.DocumentDetails)
+      // @@protoc_insertion_point(builder_scope:com.frost.documentservice.protobuf.DocumentDetailsProto)
     }
 
-    // @@protoc_insertion_point(class_scope:com.frost.documentservice.protobuf.DocumentDetails)
-    private static final com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.frost.documentservice.protobuf.DocumentDetailsProto)
+    private static final com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails();
+      DEFAULT_INSTANCE = new com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto();
     }
 
-    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getDefaultInstance() {
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DocumentDetails>
-        PARSER = new com.google.protobuf.AbstractParser<DocumentDetails>() {
+    private static final com.google.protobuf.Parser<DocumentDetailsProto>
+        PARSER = new com.google.protobuf.AbstractParser<DocumentDetailsProto>() {
       @java.lang.Override
-      public DocumentDetails parsePartialFrom(
+      public DocumentDetailsProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DocumentDetails(input, extensionRegistry);
+        return new DocumentDetailsProto(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<DocumentDetails> parser() {
+    public static com.google.protobuf.Parser<DocumentDetailsProto> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<DocumentDetails> getParserForType() {
+    public com.google.protobuf.Parser<DocumentDetailsProto> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getDefaultInstanceForType() {
+    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface DataModelOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.frost.documentservice.protobuf.DataModel)
+  public interface DataModelProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.frost.documentservice.protobuf.DataModelProto)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1288,18 +1288,18 @@ public final class DocumentProtos {
         getSalaryBytes();
   }
   /**
-   * Protobuf type {@code com.frost.documentservice.protobuf.DataModel}
+   * Protobuf type {@code com.frost.documentservice.protobuf.DataModelProto}
    */
-  public  static final class DataModel extends
+  public  static final class DataModelProto extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.frost.documentservice.protobuf.DataModel)
-      DataModelOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.frost.documentservice.protobuf.DataModelProto)
+      DataModelProtoOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use DataModel.newBuilder() to construct.
-    private DataModel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use DataModelProto.newBuilder() to construct.
+    private DataModelProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private DataModel() {
+    private DataModelProto() {
       id_ = "";
       name_ = "";
       dob_ = "";
@@ -1310,7 +1310,7 @@ public final class DocumentProtos {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new DataModel();
+      return new DataModelProto();
     }
 
     @java.lang.Override
@@ -1318,7 +1318,7 @@ public final class DocumentProtos {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DataModel(
+    private DataModelProto(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1381,15 +1381,15 @@ public final class DocumentProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModel_descriptor;
+      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModelProto_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModel_fieldAccessorTable
+      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModelProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.frost.documentservice.protobuf.DocumentProtos.DataModel.class, com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder.class);
+              com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.class, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1593,10 +1593,10 @@ public final class DocumentProtos {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.frost.documentservice.protobuf.DocumentProtos.DataModel)) {
+      if (!(obj instanceof com.frost.documentservice.protobuf.DocumentProtos.DataModelProto)) {
         return super.equals(obj);
       }
-      com.frost.documentservice.protobuf.DocumentProtos.DataModel other = (com.frost.documentservice.protobuf.DocumentProtos.DataModel) obj;
+      com.frost.documentservice.protobuf.DocumentProtos.DataModelProto other = (com.frost.documentservice.protobuf.DocumentProtos.DataModelProto) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -1630,69 +1630,69 @@ public final class DocumentProtos {
       return hash;
     }
 
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(byte[] data)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(java.io.InputStream input)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseDelimitedFrom(java.io.InputStream input)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseDelimitedFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1705,7 +1705,7 @@ public final class DocumentProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.frost.documentservice.protobuf.DocumentProtos.DataModel prototype) {
+    public static Builder newBuilder(com.frost.documentservice.protobuf.DocumentProtos.DataModelProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1721,26 +1721,26 @@ public final class DocumentProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code com.frost.documentservice.protobuf.DataModel}
+     * Protobuf type {@code com.frost.documentservice.protobuf.DataModelProto}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.frost.documentservice.protobuf.DataModel)
-        com.frost.documentservice.protobuf.DocumentProtos.DataModelOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.frost.documentservice.protobuf.DataModelProto)
+        com.frost.documentservice.protobuf.DocumentProtos.DataModelProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModel_descriptor;
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModelProto_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModel_fieldAccessorTable
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModelProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.frost.documentservice.protobuf.DocumentProtos.DataModel.class, com.frost.documentservice.protobuf.DocumentProtos.DataModel.Builder.class);
+                com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.class, com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.Builder.class);
       }
 
-      // Construct using com.frost.documentservice.protobuf.DocumentProtos.DataModel.newBuilder()
+      // Construct using com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1772,17 +1772,17 @@ public final class DocumentProtos {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModel_descriptor;
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DataModelProto_descriptor;
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.DataModel getDefaultInstanceForType() {
-        return com.frost.documentservice.protobuf.DocumentProtos.DataModel.getDefaultInstance();
+      public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto getDefaultInstanceForType() {
+        return com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.DataModel build() {
-        com.frost.documentservice.protobuf.DocumentProtos.DataModel result = buildPartial();
+      public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto build() {
+        com.frost.documentservice.protobuf.DocumentProtos.DataModelProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1790,8 +1790,8 @@ public final class DocumentProtos {
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.DataModel buildPartial() {
-        com.frost.documentservice.protobuf.DocumentProtos.DataModel result = new com.frost.documentservice.protobuf.DocumentProtos.DataModel(this);
+      public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto buildPartial() {
+        com.frost.documentservice.protobuf.DocumentProtos.DataModelProto result = new com.frost.documentservice.protobuf.DocumentProtos.DataModelProto(this);
         result.id_ = id_;
         result.name_ = name_;
         result.dob_ = dob_;
@@ -1834,16 +1834,16 @@ public final class DocumentProtos {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.frost.documentservice.protobuf.DocumentProtos.DataModel) {
-          return mergeFrom((com.frost.documentservice.protobuf.DocumentProtos.DataModel)other);
+        if (other instanceof com.frost.documentservice.protobuf.DocumentProtos.DataModelProto) {
+          return mergeFrom((com.frost.documentservice.protobuf.DocumentProtos.DataModelProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.frost.documentservice.protobuf.DocumentProtos.DataModel other) {
-        if (other == com.frost.documentservice.protobuf.DocumentProtos.DataModel.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.frost.documentservice.protobuf.DocumentProtos.DataModelProto other) {
+        if (other == com.frost.documentservice.protobuf.DocumentProtos.DataModelProto.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -1875,11 +1875,11 @@ public final class DocumentProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.frost.documentservice.protobuf.DocumentProtos.DataModel parsedMessage = null;
+        com.frost.documentservice.protobuf.DocumentProtos.DataModelProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.frost.documentservice.protobuf.DocumentProtos.DataModel) e.getUnfinishedMessage();
+          parsedMessage = (com.frost.documentservice.protobuf.DocumentProtos.DataModelProto) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2205,100 +2205,100 @@ public final class DocumentProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.frost.documentservice.protobuf.DataModel)
+      // @@protoc_insertion_point(builder_scope:com.frost.documentservice.protobuf.DataModelProto)
     }
 
-    // @@protoc_insertion_point(class_scope:com.frost.documentservice.protobuf.DataModel)
-    private static final com.frost.documentservice.protobuf.DocumentProtos.DataModel DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.frost.documentservice.protobuf.DataModelProto)
+    private static final com.frost.documentservice.protobuf.DocumentProtos.DataModelProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.frost.documentservice.protobuf.DocumentProtos.DataModel();
+      DEFAULT_INSTANCE = new com.frost.documentservice.protobuf.DocumentProtos.DataModelProto();
     }
 
-    public static com.frost.documentservice.protobuf.DocumentProtos.DataModel getDefaultInstance() {
+    public static com.frost.documentservice.protobuf.DocumentProtos.DataModelProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DataModel>
-        PARSER = new com.google.protobuf.AbstractParser<DataModel>() {
+    private static final com.google.protobuf.Parser<DataModelProto>
+        PARSER = new com.google.protobuf.AbstractParser<DataModelProto>() {
       @java.lang.Override
-      public DataModel parsePartialFrom(
+      public DataModelProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DataModel(input, extensionRegistry);
+        return new DataModelProto(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<DataModel> parser() {
+    public static com.google.protobuf.Parser<DataModelProto> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<DataModel> getParserForType() {
+    public com.google.protobuf.Parser<DataModelProto> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.frost.documentservice.protobuf.DocumentProtos.DataModel getDefaultInstanceForType() {
+    public com.frost.documentservice.protobuf.DocumentProtos.DataModelProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface DocumentsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.frost.documentservice.protobuf.Documents)
+  public interface DocumentsProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.frost.documentservice.protobuf.DocumentsProto)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
      * @return Whether the csvDocument field is set.
      */
     boolean hasCsvDocument();
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
      * @return The csvDocument.
      */
-    com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getCsvDocument();
+    com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getCsvDocument();
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
      */
-    com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder getCsvDocumentOrBuilder();
+    com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder getCsvDocumentOrBuilder();
 
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
      * @return Whether the xmlDocument field is set.
      */
     boolean hasXmlDocument();
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
      * @return The xmlDocument.
      */
-    com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getXmlDocument();
+    com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getXmlDocument();
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
      */
-    com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder getXmlDocumentOrBuilder();
+    com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder getXmlDocumentOrBuilder();
   }
   /**
-   * Protobuf type {@code com.frost.documentservice.protobuf.Documents}
+   * Protobuf type {@code com.frost.documentservice.protobuf.DocumentsProto}
    */
-  public  static final class Documents extends
+  public  static final class DocumentsProto extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.frost.documentservice.protobuf.Documents)
-      DocumentsOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.frost.documentservice.protobuf.DocumentsProto)
+      DocumentsProtoOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Documents.newBuilder() to construct.
-    private Documents(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use DocumentsProto.newBuilder() to construct.
+    private DocumentsProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Documents() {
+    private DocumentsProto() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new Documents();
+      return new DocumentsProto();
     }
 
     @java.lang.Override
@@ -2306,7 +2306,7 @@ public final class DocumentProtos {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Documents(
+    private DocumentsProto(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2325,11 +2325,11 @@ public final class DocumentProtos {
               done = true;
               break;
             case 10: {
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder subBuilder = null;
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder subBuilder = null;
               if (csvDocument_ != null) {
                 subBuilder = csvDocument_.toBuilder();
               }
-              csvDocument_ = input.readMessage(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.parser(), extensionRegistry);
+              csvDocument_ = input.readMessage(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(csvDocument_);
                 csvDocument_ = subBuilder.buildPartial();
@@ -2338,11 +2338,11 @@ public final class DocumentProtos {
               break;
             }
             case 18: {
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder subBuilder = null;
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder subBuilder = null;
               if (xmlDocument_ != null) {
                 subBuilder = xmlDocument_.toBuilder();
               }
-              xmlDocument_ = input.readMessage(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.parser(), extensionRegistry);
+              xmlDocument_ = input.readMessage(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(xmlDocument_);
                 xmlDocument_ = subBuilder.buildPartial();
@@ -2371,60 +2371,60 @@ public final class DocumentProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_Documents_descriptor;
+      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentsProto_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_Documents_fieldAccessorTable
+      return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentsProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.frost.documentservice.protobuf.DocumentProtos.Documents.class, com.frost.documentservice.protobuf.DocumentProtos.Documents.Builder.class);
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto.class, com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto.Builder.class);
     }
 
     public static final int CSVDOCUMENT_FIELD_NUMBER = 1;
-    private com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails csvDocument_;
+    private com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto csvDocument_;
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
      * @return Whether the csvDocument field is set.
      */
     public boolean hasCsvDocument() {
       return csvDocument_ != null;
     }
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
      * @return The csvDocument.
      */
-    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getCsvDocument() {
-      return csvDocument_ == null ? com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.getDefaultInstance() : csvDocument_;
+    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getCsvDocument() {
+      return csvDocument_ == null ? com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.getDefaultInstance() : csvDocument_;
     }
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
      */
-    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder getCsvDocumentOrBuilder() {
+    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder getCsvDocumentOrBuilder() {
       return getCsvDocument();
     }
 
     public static final int XMLDOCUMENT_FIELD_NUMBER = 2;
-    private com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails xmlDocument_;
+    private com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto xmlDocument_;
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
      * @return Whether the xmlDocument field is set.
      */
     public boolean hasXmlDocument() {
       return xmlDocument_ != null;
     }
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
      * @return The xmlDocument.
      */
-    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getXmlDocument() {
-      return xmlDocument_ == null ? com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.getDefaultInstance() : xmlDocument_;
+    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getXmlDocument() {
+      return xmlDocument_ == null ? com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.getDefaultInstance() : xmlDocument_;
     }
     /**
-     * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+     * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
      */
-    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder getXmlDocumentOrBuilder() {
+    public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder getXmlDocumentOrBuilder() {
       return getXmlDocument();
     }
 
@@ -2475,10 +2475,10 @@ public final class DocumentProtos {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.frost.documentservice.protobuf.DocumentProtos.Documents)) {
+      if (!(obj instanceof com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto)) {
         return super.equals(obj);
       }
-      com.frost.documentservice.protobuf.DocumentProtos.Documents other = (com.frost.documentservice.protobuf.DocumentProtos.Documents) obj;
+      com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto other = (com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto) obj;
 
       if (hasCsvDocument() != other.hasCsvDocument()) return false;
       if (hasCsvDocument()) {
@@ -2514,69 +2514,69 @@ public final class DocumentProtos {
       return hash;
     }
 
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(byte[] data)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(java.io.InputStream input)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseDelimitedFrom(java.io.InputStream input)
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseDelimitedFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents parseFrom(
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2589,7 +2589,7 @@ public final class DocumentProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.frost.documentservice.protobuf.DocumentProtos.Documents prototype) {
+    public static Builder newBuilder(com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2605,26 +2605,26 @@ public final class DocumentProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code com.frost.documentservice.protobuf.Documents}
+     * Protobuf type {@code com.frost.documentservice.protobuf.DocumentsProto}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.frost.documentservice.protobuf.Documents)
-        com.frost.documentservice.protobuf.DocumentProtos.DocumentsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.frost.documentservice.protobuf.DocumentsProto)
+        com.frost.documentservice.protobuf.DocumentProtos.DocumentsProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_Documents_descriptor;
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentsProto_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_Documents_fieldAccessorTable
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentsProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.frost.documentservice.protobuf.DocumentProtos.Documents.class, com.frost.documentservice.protobuf.DocumentProtos.Documents.Builder.class);
+                com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto.class, com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto.Builder.class);
       }
 
-      // Construct using com.frost.documentservice.protobuf.DocumentProtos.Documents.newBuilder()
+      // Construct using com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2660,17 +2660,17 @@ public final class DocumentProtos {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_Documents_descriptor;
+        return com.frost.documentservice.protobuf.DocumentProtos.internal_static_com_frost_documentservice_protobuf_DocumentsProto_descriptor;
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.Documents getDefaultInstanceForType() {
-        return com.frost.documentservice.protobuf.DocumentProtos.Documents.getDefaultInstance();
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto getDefaultInstanceForType() {
+        return com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.Documents build() {
-        com.frost.documentservice.protobuf.DocumentProtos.Documents result = buildPartial();
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto build() {
+        com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2678,8 +2678,8 @@ public final class DocumentProtos {
       }
 
       @java.lang.Override
-      public com.frost.documentservice.protobuf.DocumentProtos.Documents buildPartial() {
-        com.frost.documentservice.protobuf.DocumentProtos.Documents result = new com.frost.documentservice.protobuf.DocumentProtos.Documents(this);
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto buildPartial() {
+        com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto result = new com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto(this);
         if (csvDocumentBuilder_ == null) {
           result.csvDocument_ = csvDocument_;
         } else {
@@ -2728,16 +2728,16 @@ public final class DocumentProtos {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.frost.documentservice.protobuf.DocumentProtos.Documents) {
-          return mergeFrom((com.frost.documentservice.protobuf.DocumentProtos.Documents)other);
+        if (other instanceof com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto) {
+          return mergeFrom((com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.frost.documentservice.protobuf.DocumentProtos.Documents other) {
-        if (other == com.frost.documentservice.protobuf.DocumentProtos.Documents.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto other) {
+        if (other == com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto.getDefaultInstance()) return this;
         if (other.hasCsvDocument()) {
           mergeCsvDocument(other.getCsvDocument());
         }
@@ -2759,11 +2759,11 @@ public final class DocumentProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.frost.documentservice.protobuf.DocumentProtos.Documents parsedMessage = null;
+        com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.frost.documentservice.protobuf.DocumentProtos.Documents) e.getUnfinishedMessage();
+          parsedMessage = (com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2773,31 +2773,31 @@ public final class DocumentProtos {
         return this;
       }
 
-      private com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails csvDocument_;
+      private com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto csvDocument_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder> csvDocumentBuilder_;
+          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder> csvDocumentBuilder_;
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        * @return Whether the csvDocument field is set.
        */
       public boolean hasCsvDocument() {
         return csvDocumentBuilder_ != null || csvDocument_ != null;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        * @return The csvDocument.
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getCsvDocument() {
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getCsvDocument() {
         if (csvDocumentBuilder_ == null) {
-          return csvDocument_ == null ? com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.getDefaultInstance() : csvDocument_;
+          return csvDocument_ == null ? com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.getDefaultInstance() : csvDocument_;
         } else {
           return csvDocumentBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        */
-      public Builder setCsvDocument(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails value) {
+      public Builder setCsvDocument(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto value) {
         if (csvDocumentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2811,10 +2811,10 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        */
       public Builder setCsvDocument(
-          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder builderForValue) {
+          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder builderForValue) {
         if (csvDocumentBuilder_ == null) {
           csvDocument_ = builderForValue.build();
           onChanged();
@@ -2825,13 +2825,13 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        */
-      public Builder mergeCsvDocument(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails value) {
+      public Builder mergeCsvDocument(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto value) {
         if (csvDocumentBuilder_ == null) {
           if (csvDocument_ != null) {
             csvDocument_ =
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.newBuilder(csvDocument_).mergeFrom(value).buildPartial();
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.newBuilder(csvDocument_).mergeFrom(value).buildPartial();
           } else {
             csvDocument_ = value;
           }
@@ -2843,7 +2843,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        */
       public Builder clearCsvDocument() {
         if (csvDocumentBuilder_ == null) {
@@ -2857,33 +2857,33 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder getCsvDocumentBuilder() {
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder getCsvDocumentBuilder() {
         
         onChanged();
         return getCsvDocumentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder getCsvDocumentOrBuilder() {
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder getCsvDocumentOrBuilder() {
         if (csvDocumentBuilder_ != null) {
           return csvDocumentBuilder_.getMessageOrBuilder();
         } else {
           return csvDocument_ == null ?
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.getDefaultInstance() : csvDocument_;
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.getDefaultInstance() : csvDocument_;
         }
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails csvDocument = 1;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto csvDocument = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder> 
+          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder> 
           getCsvDocumentFieldBuilder() {
         if (csvDocumentBuilder_ == null) {
           csvDocumentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder>(
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder>(
                   getCsvDocument(),
                   getParentForChildren(),
                   isClean());
@@ -2892,31 +2892,31 @@ public final class DocumentProtos {
         return csvDocumentBuilder_;
       }
 
-      private com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails xmlDocument_;
+      private com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto xmlDocument_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder> xmlDocumentBuilder_;
+          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder> xmlDocumentBuilder_;
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        * @return Whether the xmlDocument field is set.
        */
       public boolean hasXmlDocument() {
         return xmlDocumentBuilder_ != null || xmlDocument_ != null;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        * @return The xmlDocument.
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails getXmlDocument() {
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto getXmlDocument() {
         if (xmlDocumentBuilder_ == null) {
-          return xmlDocument_ == null ? com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.getDefaultInstance() : xmlDocument_;
+          return xmlDocument_ == null ? com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.getDefaultInstance() : xmlDocument_;
         } else {
           return xmlDocumentBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        */
-      public Builder setXmlDocument(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails value) {
+      public Builder setXmlDocument(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto value) {
         if (xmlDocumentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2930,10 +2930,10 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        */
       public Builder setXmlDocument(
-          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder builderForValue) {
+          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder builderForValue) {
         if (xmlDocumentBuilder_ == null) {
           xmlDocument_ = builderForValue.build();
           onChanged();
@@ -2944,13 +2944,13 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        */
-      public Builder mergeXmlDocument(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails value) {
+      public Builder mergeXmlDocument(com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto value) {
         if (xmlDocumentBuilder_ == null) {
           if (xmlDocument_ != null) {
             xmlDocument_ =
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.newBuilder(xmlDocument_).mergeFrom(value).buildPartial();
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.newBuilder(xmlDocument_).mergeFrom(value).buildPartial();
           } else {
             xmlDocument_ = value;
           }
@@ -2962,7 +2962,7 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        */
       public Builder clearXmlDocument() {
         if (xmlDocumentBuilder_ == null) {
@@ -2976,33 +2976,33 @@ public final class DocumentProtos {
         return this;
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder getXmlDocumentBuilder() {
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder getXmlDocumentBuilder() {
         
         onChanged();
         return getXmlDocumentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        */
-      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder getXmlDocumentOrBuilder() {
+      public com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder getXmlDocumentOrBuilder() {
         if (xmlDocumentBuilder_ != null) {
           return xmlDocumentBuilder_.getMessageOrBuilder();
         } else {
           return xmlDocument_ == null ?
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.getDefaultInstance() : xmlDocument_;
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.getDefaultInstance() : xmlDocument_;
         }
       }
       /**
-       * <code>.com.frost.documentservice.protobuf.DocumentDetails xmlDocument = 2;</code>
+       * <code>.com.frost.documentservice.protobuf.DocumentDetailsProto xmlDocument = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder> 
+          com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder> 
           getXmlDocumentFieldBuilder() {
         if (xmlDocumentBuilder_ == null) {
           xmlDocumentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetails.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsOrBuilder>(
+              com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder, com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProtoOrBuilder>(
                   getXmlDocument(),
                   getParentForChildren(),
                   isClean());
@@ -3023,61 +3023,61 @@ public final class DocumentProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.frost.documentservice.protobuf.Documents)
+      // @@protoc_insertion_point(builder_scope:com.frost.documentservice.protobuf.DocumentsProto)
     }
 
-    // @@protoc_insertion_point(class_scope:com.frost.documentservice.protobuf.Documents)
-    private static final com.frost.documentservice.protobuf.DocumentProtos.Documents DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.frost.documentservice.protobuf.DocumentsProto)
+    private static final com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.frost.documentservice.protobuf.DocumentProtos.Documents();
+      DEFAULT_INSTANCE = new com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto();
     }
 
-    public static com.frost.documentservice.protobuf.DocumentProtos.Documents getDefaultInstance() {
+    public static com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Documents>
-        PARSER = new com.google.protobuf.AbstractParser<Documents>() {
+    private static final com.google.protobuf.Parser<DocumentsProto>
+        PARSER = new com.google.protobuf.AbstractParser<DocumentsProto>() {
       @java.lang.Override
-      public Documents parsePartialFrom(
+      public DocumentsProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Documents(input, extensionRegistry);
+        return new DocumentsProto(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Documents> parser() {
+    public static com.google.protobuf.Parser<DocumentsProto> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Documents> getParserForType() {
+    public com.google.protobuf.Parser<DocumentsProto> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.frost.documentservice.protobuf.DocumentProtos.Documents getDefaultInstanceForType() {
+    public com.frost.documentservice.protobuf.DocumentProtos.DocumentsProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_frost_documentservice_protobuf_DocumentDetails_descriptor;
+    internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_frost_documentservice_protobuf_DocumentDetails_fieldAccessorTable;
+      internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_frost_documentservice_protobuf_DataModel_descriptor;
+    internal_static_com_frost_documentservice_protobuf_DataModelProto_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_frost_documentservice_protobuf_DataModel_fieldAccessorTable;
+      internal_static_com_frost_documentservice_protobuf_DataModelProto_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_frost_documentservice_protobuf_Documents_descriptor;
+    internal_static_com_frost_documentservice_protobuf_DocumentsProto_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_frost_documentservice_protobuf_Documents_fieldAccessorTable;
+      internal_static_com_frost_documentservice_protobuf_DocumentsProto_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3088,39 +3088,39 @@ public final class DocumentProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\025DocumentDetails.proto\022\"com.frost.docum" +
-      "entservice.protobuf\"|\n\017DocumentDetails\022\014" +
-      "\n\004size\030\001 \001(\005\022\014\n\004type\030\002 \001(\t\022<\n\005datas\030\003 \003(" +
-      "\0132-.com.frost.documentservice.protobuf.D" +
-      "ataModel\022\017\n\007headers\030\004 \003(\t\"B\n\tDataModel\022\n" +
-      "\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n\003dob\030\003 \001(\t\022\016\n" +
-      "\006salary\030\004 \001(\t\"\237\001\n\tDocuments\022H\n\013csvDocume" +
-      "nt\030\001 \001(\01323.com.frost.documentservice.pro" +
-      "tobuf.DocumentDetails\022H\n\013xmlDocument\030\002 \001" +
-      "(\01323.com.frost.documentservice.protobuf." +
-      "DocumentDetailsB\020B\016DocumentProtosb\006proto" +
-      "3"
+      "entservice.protobuf\"\206\001\n\024DocumentDetailsP" +
+      "roto\022\014\n\004size\030\001 \001(\005\022\014\n\004type\030\002 \001(\t\022A\n\005data" +
+      "s\030\003 \003(\01322.com.frost.documentservice.prot" +
+      "obuf.DataModelProto\022\017\n\007headers\030\004 \003(\t\"G\n\016" +
+      "DataModelProto\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
+      "\022\013\n\003dob\030\003 \001(\t\022\016\n\006salary\030\004 \001(\t\"\256\001\n\016Docume" +
+      "ntsProto\022M\n\013csvDocument\030\001 \001(\01328.com.fros" +
+      "t.documentservice.protobuf.DocumentDetai" +
+      "lsProto\022M\n\013xmlDocument\030\002 \001(\01328.com.frost" +
+      ".documentservice.protobuf.DocumentDetail" +
+      "sProtoB\020B\016DocumentProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_com_frost_documentservice_protobuf_DocumentDetails_descriptor =
+    internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_frost_documentservice_protobuf_DocumentDetails_fieldAccessorTable = new
+    internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_frost_documentservice_protobuf_DocumentDetails_descriptor,
+        internal_static_com_frost_documentservice_protobuf_DocumentDetailsProto_descriptor,
         new java.lang.String[] { "Size", "Type", "Datas", "Headers", });
-    internal_static_com_frost_documentservice_protobuf_DataModel_descriptor =
+    internal_static_com_frost_documentservice_protobuf_DataModelProto_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_frost_documentservice_protobuf_DataModel_fieldAccessorTable = new
+    internal_static_com_frost_documentservice_protobuf_DataModelProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_frost_documentservice_protobuf_DataModel_descriptor,
+        internal_static_com_frost_documentservice_protobuf_DataModelProto_descriptor,
         new java.lang.String[] { "Id", "Name", "Dob", "Salary", });
-    internal_static_com_frost_documentservice_protobuf_Documents_descriptor =
+    internal_static_com_frost_documentservice_protobuf_DocumentsProto_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_frost_documentservice_protobuf_Documents_fieldAccessorTable = new
+    internal_static_com_frost_documentservice_protobuf_DocumentsProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_frost_documentservice_protobuf_Documents_descriptor,
+        internal_static_com_frost_documentservice_protobuf_DocumentsProto_descriptor,
         new java.lang.String[] { "CsvDocument", "XmlDocument", });
   }
 
