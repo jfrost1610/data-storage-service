@@ -8,7 +8,3 @@ kafka:
   topic:
     create: create-document
     update: update-document
-    
-spring:
-  kafka:
-    bootstrap-servers: kafka:9092
