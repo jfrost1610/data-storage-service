@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.frost.storageservice.protobuf;
+option java_outer_classname = "DocumentProtos";
+
+message DocumentDetails {
+	int32 size = 1;
+	string type = 2;
+	repeated DataModel datas = 3;
+	repeated string headers = 4;
+}
+
+message DataModel {
+	string id = 1;
+    string name = 2;
+    string dob = 3;
+    string salary = 4;
+}
+
+message Documents {
+	DocumentDetails csvDocument = 1;
+	DocumentDetails xmlDocument = 2;
+}
