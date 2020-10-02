@@ -6,10 +6,12 @@ kafka:
 spring:
   application:
     name: document-service
+  kafka:
+    bootstrap-servers: kafka:9092
     
 server:
-  port: 8080
+  port: 8081
 
 feign:
   apis:
-    document: http://localhost:8081
+    document: http://storageservice:8082

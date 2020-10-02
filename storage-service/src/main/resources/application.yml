@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8082
     
 storage:
   path: ${STORAGE_PATH}
@@ -8,3 +8,7 @@ kafka:
   topic:
     create: create-document
     update: update-document
+    
+spring:
+  kafka:
+    bootstrap-servers: kafka:9092
