@@ -1,0 +1,10 @@
+server:
+  port: 8081
+    
+storage:
+  path: ${STORAGE_PATH}
+  
+kafka:
+  topic:
+    create: create-document
+    update: update-document

@@ -1,0 +1,15 @@
+kafka:
+  topic:
+    create: create-document
+    update: update-document
+    
+spring:
+  application:
+    name: document-service
+    
+server:
+  port: 8080
+
+feign:
+  apis:
+    document: http://localhost:8081
