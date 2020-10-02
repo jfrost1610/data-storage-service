@@ -23,15 +23,27 @@ services:
       KAFKA_CREATE_TOPICS: "create-document:1:1,update-document:1:1"
     depends_on:
       - zookeeper
+  schema-registry:
+    image: confluentinc/cp-schema-registry:latest
+    depends_on: 
+      - zookeeper
+      - kafka
+    ports:
+      - "8083:8081"
+    environment: 
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: 'zookeeper:2181'
   documentservice:
     build: ./document-service
     environment:
       SPRING_KAFKA_BOOTSTRAPSERVERS: kafka:29092
+      SPRING_KAFKA_SCHEMA_REGISTRY: schema-registry:8083
     links:
       - kafka:kafka
       - storageservice:storageservice
     depends_on:
       - kafka
+      - schema-registry:schema-registry
     ports:
       - "8081:8081"
   storageservice:
@@ -39,8 +51,10 @@ services:
     environment:
       STORAGE_PATH: '/storage'
       SPRING_KAFKA_BOOTSTRAPSERVERS: kafka:29092
+      SPRING_KAFKA_SCHEMA_REGISTRY: schema-registry:8083
     links:
       - kafka:kafka
+      - schema-registry:schema-registry
     depends_on:
       - kafka
     volumes:
