@@ -28,24 +28,21 @@ public class DataProcessor {
 	@KafkaListener(topics = "${kafka.topic.create}")
 	public void addData(DocumentDetailsProto message) {
 
-		// Gson gson = new Gson();
-		// DocumentDetails documentDetails = gson.fromJson(message,
-		// DocumentDetails.class);
+		DocumentDetails documentDetails = new DocumentDetails(message);
 
 		log.info("Starting to add Data. {}", message);
 
-		// documentService.addDataToDocument(documentDetails);
+		documentService.addDataToDocument(documentDetails);
 
 		log.info("Completed to add Data.");
 
 	}
 
 	@KafkaListener(topics = "${kafka.topic.update}")
-	public void updateData(String message) {
+	public void updateData(DocumentDetailsProto message) {
 
 		Gson gson = new Gson();
-		DocumentDetails documentDetails = gson.fromJson(message, DocumentDetails.class);
-
+		DocumentDetails documentDetails = new DocumentDetails(message);
 		log.info("Starting to add Data.");
 
 		documentService.updateDataOnDocument(documentDetails);

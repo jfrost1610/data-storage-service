@@ -18,4 +18,4 @@ server:
 
 feign:
   apis:
-    document: http://storageservice:8082
+    document: http://${STORAGE_SERVICE_HOST}:${STORAGE_SERVICE_PORT}

@@ -163,7 +163,7 @@ public class CSVDataWriter implements DataWriter {
 
 				for (String[] csvLine : csvBody) {
 					matchingRowNbr++;
-					if (csvLine[0].equals(data.getId())) {
+					if (matchingRowNbr != 0 && matchingRowNbr != 1 && csvLine[0].equals(data.getId())) {
 						csvBody.get(matchingRowNbr)[1] = data.getName();
 						csvBody.get(matchingRowNbr)[2] = data.getDob();
 						csvBody.get(matchingRowNbr)[3] = data.getSalary();
