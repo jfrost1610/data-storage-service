@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import com.frost.documentservice.model.DataModel;
 import com.frost.documentservice.model.DocumentDetails;
@@ -49,11 +49,11 @@ public class DocumentPublisher {
 			builder.setType(payload.getType());
 		}
 
-		if (CollectionUtils.isNotEmpty(payload.getDatas())) {
+		if (!CollectionUtils.isEmpty(payload.getDatas())) {
 			builder.addAllDatas(convertToDataModelProtos(payload.getDatas()));
 		}
 
-		if (CollectionUtils.isNotEmpty(payload.getHeaders())) {
+		if (!CollectionUtils.isEmpty(payload.getHeaders())) {
 			builder.addAllHeaders(payload.getHeaders());
 		}
 
