@@ -51,7 +51,7 @@ public class DocumentService {
 		
 		log.info("Fetched all file data");
 
-		return dataTransformationService.encryptAndConvertToDocumentsProto(csvDocument, xmlDocument);
+		return dataTransformationService.encryptAndConvertToDocuments(csvDocument, xmlDocument);
 	}
 
 }

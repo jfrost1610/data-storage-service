@@ -36,7 +36,7 @@ public class DataTransformationService {
 		return documentDetails;
 	}
 
-	public Documents encryptAndConvertToDocumentsProto(DocumentDetails csvDocument, DocumentDetails xmlDocument) {
+	public Documents encryptAndConvertToDocuments(DocumentDetails csvDocument, DocumentDetails xmlDocument) {
 		return new Documents(encryptDocumentDetails(csvDocument), encryptDocumentDetails(xmlDocument));
 	}
 
