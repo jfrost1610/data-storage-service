@@ -8,3 +8,6 @@ kafka:
   topic:
     create: create-document
     update: update-document
+    
+aes:
+  secret: ${AES_SECRET}

@@ -7,10 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-import com.frost.storageservice.model.DocumentDetails;
 import com.frost.storageservice.protobuf.DocumentProtos.DocumentDetailsProto;
 import com.frost.storageservice.service.DocumentService;
-import com.google.gson.Gson;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -28,11 +26,9 @@ public class DataProcessor {
 	@KafkaListener(topics = "${kafka.topic.create}")
 	public void addData(DocumentDetailsProto message) {
 
-		DocumentDetails documentDetails = new DocumentDetails(message);
-
 		log.info("Starting to add Data. {}", message);
 
-		documentService.addDataToDocument(documentDetails);
+		documentService.addDataToDocument(message);
 
 		log.info("Completed to add Data.");
 
@@ -41,11 +37,9 @@ public class DataProcessor {
 	@KafkaListener(topics = "${kafka.topic.update}")
 	public void updateData(DocumentDetailsProto message) {
 
-		Gson gson = new Gson();
-		DocumentDetails documentDetails = new DocumentDetails(message);
-		log.info("Starting to add Data.");
+		log.info("Starting to update Data.", message);
 
-		documentService.updateDataOnDocument(documentDetails);
+		documentService.updateDataOnDocument(message);
 
 		log.info("Completed to update Data.");
 
