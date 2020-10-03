@@ -3,6 +3,7 @@
  */
 package com.frost.documentservice.controller;
 
+import java.util.Arrays;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -39,14 +40,14 @@ public class DataController {
 	@Autowired
 	private DocumentService documentService;
 
+	private static final List<String> validFileTypes = Arrays.asList("CSV", "XML");
+
 	@PutMapping
 	public @ResponseBody ResponseEntity<String> createData(
 			@RequestHeader(value = "fileType", required = true) String fileType,
 			@Valid @RequestBody List<DataModel> datas) throws ValidationException {
 
-		if (StringUtils.isBlank(fileType)) {
-			throw new ValidationException("FileType Header cannot be empty");
-		}
+		headerValidations(fileType);
 
 		documentService.addDataToDocument(fileType, datas);
 
@@ -59,9 +60,7 @@ public class DataController {
 			@RequestHeader(value = "fileType", required = true) String fileType,
 			@Valid @RequestBody List<DataModel> datas) throws ValidationException {
 
-		if (StringUtils.isBlank(fileType)) {
-			throw new ValidationException("FileType Header cannot be empty");
-		}
+		headerValidations(fileType);
 
 		log.info("Publising message to update the document.");
 		documentService.updateDocument(fileType, datas);
@@ -73,7 +72,7 @@ public class DataController {
 	@GetMapping
 	public @ResponseBody ResponseEntity<Documents> getData() {
 		Documents documents = null;
-		
+
 		try {
 			documents = documentService.getAllData();
 		} catch (Exception e) {
@@ -82,6 +81,23 @@ public class DataController {
 		log.info("Fetched all data.");
 
 		return ResponseEntity.status(HttpStatus.OK).body(documents);
+
+	}
+
+	/**
+	 * @param fileType
+	 * @throws ValidationException
+	 */
+	private void headerValidations(String fileType) throws ValidationException {
+
+		if (StringUtils.isBlank(fileType)) {
+			throw new ValidationException("FileType Header cannot be empty");
+		}
+
+		if (!validFileTypes.contains(fileType.toUpperCase())) {
+			throw new ValidationException(
+					"Invalid FileType Header value [" + fileType + "]. Valid types are " + validFileTypes);
+		}
 
 	}
 

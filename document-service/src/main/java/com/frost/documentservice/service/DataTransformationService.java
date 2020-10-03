@@ -40,10 +40,6 @@ public class DataTransformationService {
 			builder.addAllDatas(convertToDataModelProtos(payload.getDatas()));
 		}
 
-		if (!CollectionUtils.isEmpty(payload.getHeaders())) {
-			builder.addAllHeaders(payload.getHeaders());
-		}
-
 		return builder.build();
 	}
 

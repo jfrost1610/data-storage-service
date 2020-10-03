@@ -3,8 +3,6 @@
  */
 package com.frost.documentservice.model;
 
-import java.time.LocalDate;
-
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -35,12 +33,5 @@ public class DataModel {
 	@NotNull(message = "Salary cannot be null")
 	@Min(value = 1, message = "Salary should be more than or equal to 1")
 	private String salary;
-
-	/**
-	 * @return the dob
-	 */
-	public LocalDate getDobDate() {
-		return LocalDate.parse(dob);
-	}
 
 }
