@@ -8,7 +8,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -95,9 +94,7 @@ public class CSVDataWriter implements DataWriter {
 
 			String[] metaData = reader.readNext();
 			documents.setSize(Integer.parseInt(metaData[0]));
-
-			String[] headers = reader.readNext();
-			documents.setHeaders(Arrays.asList(headers));
+			reader.readNext();
 
 			String[] nextRecord;
 

@@ -47,7 +47,7 @@ public class DocumentService {
 		log.info("Getting all Data!");
 		
 		DocumentDetails csvDocument = writerFactory.getWriter("CSV").readAll();
-		DocumentDetails xmlDocument = null;// writerFactory.getWriter("XML").readAll();
+		DocumentDetails xmlDocument = writerFactory.getWriter("XML").readAll();
 		
 		log.info("Fetched all file data");
 

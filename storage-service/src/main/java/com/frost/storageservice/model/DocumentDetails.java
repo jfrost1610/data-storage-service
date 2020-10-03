@@ -21,13 +21,11 @@ public class DocumentDetails {
 	private int size;
 	private String type;
 	private List<DataModel> datas;
-	private List<String> headers;
 
 	public DocumentDetails(DocumentDetailsProto message) {
 
 		this.size = message.getSize();
 		this.type = message.getType();
-		this.headers = message.getHeadersList();
 		this.datas = new ArrayList<>();
 		message.getDatasList().forEach(dataEach -> {
 			this.datas.add(new DataModel(dataEach));
