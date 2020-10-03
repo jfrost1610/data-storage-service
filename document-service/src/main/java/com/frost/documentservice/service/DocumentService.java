@@ -9,6 +9,7 @@ import com.frost.documentservice.client.DocumentClient;
 import com.frost.documentservice.model.DataModel;
 import com.frost.documentservice.model.DocumentDetails;
 import com.frost.documentservice.model.Documents;
+import com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto;
 import com.frost.documentservice.publisher.DocumentPublisher;
 
 import lombok.extern.slf4j.Slf4j;
@@ -23,24 +24,28 @@ public class DocumentService {
 	@Autowired
 	private DocumentPublisher publisher;
 
+	@Autowired
+	private DataTransformationService dataTransformationService;
+
 	public void addDataToDocument(String fileType, List<DataModel> datas) {
 		DocumentDetails newDocument = DocumentDetails.builder().type(fileType).datas(datas).build();
+		DocumentDetailsProto protoPayload = dataTransformationService.encryptAndConvertToProto(newDocument);
 		log.info("Publishing Create Message to topic.");
-		publisher.create(newDocument);
+		publisher.create(protoPayload);
 
 	}
 
 	public void updateDocument(String fileType, List<DataModel> datas) {
 		DocumentDetails documentDetails = DocumentDetails.builder().type(fileType).datas(datas).build();
-		documentDetails.setDatas(datas);
+		DocumentDetailsProto protoPayload = dataTransformationService.encryptAndConvertToProto(documentDetails);
 		log.info("Publishing Update Message to topc.");
-		publisher.update(documentDetails);
+		publisher.update(protoPayload);
 
 	}
 
 	public Documents getAllData() {
 		log.info("Calling Document client to fetch all data");
-		return client.getAllData();
+		return dataTransformationService.decryptDocumentDatas(client.getAllData());
 	}
 
 }

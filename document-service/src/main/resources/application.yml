@@ -19,3 +19,6 @@ server:
 feign:
   apis:
     document: http://${STORAGE_SERVICE_HOST}:${STORAGE_SERVICE_PORT}
+    
+aes:
+  secret: ${AES_SECRET}

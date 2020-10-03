@@ -3,9 +3,7 @@
  */
 package com.frost.documentservice.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * @author jobin
