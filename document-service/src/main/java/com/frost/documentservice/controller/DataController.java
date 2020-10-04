@@ -95,10 +95,6 @@ public class DataController {
 
 		Map<String, String> errorMap = new HashMap<>();
 
-		if (StringUtils.isBlank(fileType)) {
-			errorMap.put(fileType, "FileType Header cannot be empty");
-		}
-
 		if (!validFileTypes.contains(fileType.toUpperCase())) {
 			errorMap.put("fileType",
 					"Invalid FileType Header value [" + fileType + "]. Valid types are " + validFileTypes);

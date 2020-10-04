@@ -1,0 +1,1 @@
+{"status":"BAD_REQUEST","errors":["fileType : Invalid FileType Header value [ACTUAL_VALUE]. Valid types are [CSV, XML]"]}
