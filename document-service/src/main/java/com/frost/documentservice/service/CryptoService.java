@@ -32,22 +32,15 @@ public class CryptoService {
 	private static final String SHA1_MESSAGEDIGEST_ALGORITHM = "SHA-1";
 	private static final String AES_TRANSFOMRATION = "AES/ECB/PKCS5Padding";
 
-	private SecretKeySpec getKey() {
+	private SecretKeySpec getKey() throws UnsupportedEncodingException, NoSuchAlgorithmException {
 
-		try {
+		byte[] key = secret.getBytes(UTF8_ENCODING);
+		MessageDigest sha = MessageDigest.getInstance(SHA1_MESSAGEDIGEST_ALGORITHM);
+		key = sha.digest(key);
+		key = Arrays.copyOf(key, 16);
 
-			byte[] key = secret.getBytes(UTF8_ENCODING);
-			MessageDigest sha = MessageDigest.getInstance(SHA1_MESSAGEDIGEST_ALGORITHM);
-			key = sha.digest(key);
-			key = Arrays.copyOf(key, 16);
+		return new SecretKeySpec(key, AES_ENCRYPTION_ALGORITHM);
 
-			return new SecretKeySpec(key, AES_ENCRYPTION_ALGORITHM);
-
-		} catch (NoSuchAlgorithmException e) {
-			throw new EncryptionException("No Algorithm Found!", e);
-		} catch (UnsupportedEncodingException e) {
-			throw new EncryptionException("Encoding not supported!", e);
-		}
 	}
 
 	public String encrypt(String strToEncrypt) {
