@@ -1,9 +1,9 @@
-###Data Storage API
+# Data Storage API
 
 Spring Boot Microservices for a File Storage System.
 This Service provides APIs to add, update or read Data from either a CSV or XML Data File.
 
-##Installation Guide
+## Installation Guide
 
 This project has been written to be tested with minimal setup.
 Docker is required to be running in your system to run the docker-compose file. Get Docker for Windows [here](https://docs.docker.com/docker-for-windows/install/)
@@ -35,7 +35,7 @@ c76c2e5d20de        data-storage-service_documentservice     "java -jar -Dspring
 341a195477e7        confluentinc/cp-zookeeper:latest         "/etc/confluent/dock…"   23 hours ago        Up 34 seconds       2888/tcp, 0.0.0.0:2181->2181/tcp, 3888/tcp   data-storage-service_zookeeper_1
 ```
 
-###Optional Configuration:
+### Optional Configuration:
 
 The XML and CSV Data file will be stored by default at the **./file-storage/** directory of the source code.
 This can be modified by updating the FILE_STORAGE_PATH variable in the .env file at the root of the source code.
@@ -50,7 +50,7 @@ Additionally the AES key used to encrypt and decrypt the data being transferred 
 AES_SECRET=testsecret
 ```
 
-##Testing
+## Testing
 
 There are three APIs being exposed by the DocumentService on port 8081.
 
