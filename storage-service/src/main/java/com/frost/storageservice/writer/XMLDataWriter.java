@@ -50,6 +50,15 @@ public class XMLDataWriter implements DataWriter {
 	public void initialize() {
 
 		log.info("Initializing XMLDataWriter");
+		initializeXMLFile();
+		log.info("XMLDataWriter Ready");
+
+	}
+
+	/**
+	 * 
+	 */
+	private void initializeXMLFile() {
 
 		try {
 
@@ -69,8 +78,6 @@ public class XMLDataWriter implements DataWriter {
 		} catch (Exception e) {
 			throw new WriterException("Failed to initialize the XML Data file at " + getFilePath(), e);
 		}
-
-		log.info("XMLDataWriter Ready");
 
 	}
 
@@ -92,7 +99,9 @@ public class XMLDataWriter implements DataWriter {
 	@Override
 	public boolean write(DocumentDetails document) {
 
-		initialize();
+		log.info("Adding Data to XML!");
+
+		initializeXMLFile();
 
 		int count = Integer.valueOf(getCurrentSize());
 		log.info("Current Count: {}", count);
@@ -121,7 +130,9 @@ public class XMLDataWriter implements DataWriter {
 	@Override
 	public boolean update(DocumentDetails document) {
 
-		initialize();
+		log.info("Updating Data in XML!");
+
+		initializeXMLFile();
 		writeOrUpdate(document);
 		save();
 
@@ -150,6 +161,10 @@ public class XMLDataWriter implements DataWriter {
 
 	@Override
 	public DocumentDetails readAll() {
+
+		log.info("Starting to read Data from XML!");
+
+		initializeXMLFile();
 
 		DocumentDetails documents = new DocumentDetails();
 		documents.setType("XML");

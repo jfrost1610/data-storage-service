@@ -4,7 +4,9 @@
 package com.frost.documentservice.controller;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -12,6 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -32,6 +35,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author jobin
  *
  */
+@Validated
 @Slf4j
 @RestController
 @RequestMapping("/data")
@@ -45,7 +49,7 @@ public class DataController {
 	@PutMapping
 	public @ResponseBody ResponseEntity<String> createData(
 			@RequestHeader(value = "fileType", required = true) String fileType,
-			@Valid @RequestBody List<DataModel> datas) throws ValidationException {
+			@Valid @RequestBody List<DataModel> datas) {
 
 		headerValidations(fileType);
 
@@ -58,9 +62,10 @@ public class DataController {
 	@PostMapping
 	public @ResponseBody ResponseEntity<String> updateData(
 			@RequestHeader(value = "fileType", required = true) String fileType,
-			@Valid @RequestBody List<DataModel> datas) throws ValidationException {
+			@Valid @RequestBody List<DataModel> datas) {
 
 		headerValidations(fileType);
+		idValidation(datas);
 
 		log.info("Publising message to update the document.");
 		documentService.updateDocument(fileType, datas);
@@ -71,13 +76,11 @@ public class DataController {
 
 	@GetMapping
 	public @ResponseBody ResponseEntity<Documents> getData() {
-		Documents documents = null;
 
-		try {
-			documents = documentService.getAllData();
-		} catch (Exception e) {
-			log.error("Exception occuerd", e);
-		}
+		log.info("Starting to fetch all data.");
+
+		Documents documents = documentService.getAllData();
+
 		log.info("Fetched all data.");
 
 		return ResponseEntity.status(HttpStatus.OK).body(documents);
@@ -88,15 +91,37 @@ public class DataController {
 	 * @param fileType
 	 * @throws ValidationException
 	 */
-	private void headerValidations(String fileType) throws ValidationException {
+	private void headerValidations(String fileType) {
+
+		Map<String, String> errorMap = new HashMap<>();
 
 		if (StringUtils.isBlank(fileType)) {
-			throw new ValidationException("FileType Header cannot be empty");
+			errorMap.put(fileType, "FileType Header cannot be empty");
 		}
 
 		if (!validFileTypes.contains(fileType.toUpperCase())) {
-			throw new ValidationException(
+			errorMap.put("fileType",
 					"Invalid FileType Header value [" + fileType + "]. Valid types are " + validFileTypes);
+		}
+
+		if (!errorMap.isEmpty()) {
+			throw new ValidationException("Header Validations Failed", errorMap);
+		}
+
+	}
+
+	private void idValidation(List<DataModel> datas) {
+
+		Map<String, String> errorMap = new HashMap<>();
+
+		for (int i = 0; i < datas.size(); i++) {
+			if (StringUtils.isBlank(datas.get(i).getId())) {
+				errorMap.put("DataModel[" + i + "]", "id is a Mandatory field");
+			}
+		}
+
+		if (!errorMap.isEmpty()) {
+			throw new ValidationException("id is a Mandatory field!", errorMap);
 		}
 
 	}

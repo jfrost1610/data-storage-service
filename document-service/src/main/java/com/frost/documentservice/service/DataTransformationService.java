@@ -18,10 +18,13 @@ import com.frost.documentservice.protobuf.DocumentProtos.DataModelProto;
 import com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto;
 import com.frost.documentservice.protobuf.DocumentProtos.DocumentDetailsProto.Builder;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author jobin
  *
  */
+@Slf4j
 @Service
 public class DataTransformationService {
 
@@ -73,11 +76,13 @@ public class DataTransformationService {
 
 	public Documents decryptDocumentDatas(Documents documents) {
 
-		if (Objects.nonNull(documents.getCsvDocument())) {
+		log.info("Starting to decrypt DocumentDatas: {}", documents);
+
+		if (documents.containsCSVData()) {
 			documents.getCsvDocument().getDatas().forEach(this::decryptDocumentData);
 		}
 
-		if (Objects.nonNull(documents.getXmlDocument())) {
+		if (documents.containsXMLData()) {
 			documents.getXmlDocument().getDatas().forEach(this::decryptDocumentData);
 		}
 

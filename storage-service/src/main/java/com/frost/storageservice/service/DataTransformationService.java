@@ -7,6 +7,7 @@ import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import com.frost.storageservice.model.DocumentDetails;
 import com.frost.storageservice.model.Documents;
@@ -45,7 +46,7 @@ public class DataTransformationService {
 	 */
 	private DocumentDetails encryptDocumentDetails(DocumentDetails document) {
 
-		if (Objects.nonNull(document)) {
+		if (Objects.nonNull(document) && !CollectionUtils.isEmpty(document.getDatas())) {
 			document.getDatas().forEach(data -> {
 
 				data.setName(cryptoService.encrypt(data.getName()));

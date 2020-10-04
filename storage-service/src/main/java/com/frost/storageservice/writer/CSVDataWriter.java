@@ -38,28 +38,41 @@ public class CSVDataWriter implements DataWriter {
 	public void initialize() throws IOException {
 
 		log.info("Initializing CSVDataWriter");
+		initializeCSVFile();
+		log.info("CSVDataWriter Ready");
+
+	}
+
+	/**
+	 * @throws IOException
+	 */
+	private void initializeCSVFile() throws IOException {
 
 		File file = new File(getFilePath());
+
 		if (!file.isFile()) {
+
 			log.info("Creating CSVDataFile at {}", getFilePath());
+
 			try (FileWriter outputfile = new FileWriter(file); CSVWriter writer = new CSVWriter(outputfile);) {
 				String[] metaData = { "0" };
 				writer.writeNext(metaData);
 				String[] header = { "Id", "Name", "DOB", "Salary" };
 				writer.writeNext(header);
 			}
-		}
 
-		log.info("CSVDataWriter Ready");
+		}
 
 	}
 
 	@Override
 	public boolean write(DocumentDetails document) {
 
+		log.info("Adding Data to CSV!");
+
 		try {
 
-			initialize();
+			initializeCSVFile();
 			appendData(document);
 
 			return true;
@@ -72,7 +85,10 @@ public class CSVDataWriter implements DataWriter {
 	@Override
 	public boolean update(DocumentDetails document) {
 
+		log.info("Updating Data in CSV!");
+
 		try {
+			initializeCSVFile();
 			updateData(document);
 			return true;
 		} catch (Exception e) {
@@ -84,27 +100,37 @@ public class CSVDataWriter implements DataWriter {
 	@Override
 	public DocumentDetails readAll() throws IOException {
 
+		log.info("Starting to read Data from CSV!");
+
+		initializeCSVFile();
+
 		File dataFile = new File(getFilePath());
 		DocumentDetails documents = new DocumentDetails();
 		documents.setType("CSV");
 
-		List<DataModel> dataModels = new ArrayList<>();
+		try {
 
-		try (CSVReader reader = new CSVReader(new FileReader(dataFile))) {
+			List<DataModel> dataModels = new ArrayList<>();
 
-			String[] metaData = reader.readNext();
-			documents.setSize(Integer.parseInt(metaData[0]));
-			reader.readNext();
+			try (CSVReader reader = new CSVReader(new FileReader(dataFile))) {
 
-			String[] nextRecord;
+				String[] metaData = reader.readNext();
+				documents.setSize(Integer.parseInt(metaData[0]));
+				reader.readNext();
 
-			while ((nextRecord = reader.readNext()) != null) {
-				DataModel dataModel = new DataModel(nextRecord[0], nextRecord[1], nextRecord[2], nextRecord[3]);
-				dataModels.add(dataModel);
+				String[] nextRecord;
+
+				while ((nextRecord = reader.readNext()) != null) {
+					DataModel dataModel = new DataModel(nextRecord[0], nextRecord[1], nextRecord[2], nextRecord[3]);
+					dataModels.add(dataModel);
+				}
+
+				documents.setDatas(dataModels);
+
 			}
 
-			documents.setDatas(dataModels);
-
+		} catch (Exception e) {
+			log.error("Failed to read CSV Data! ", e);
 		}
 
 		return documents;
