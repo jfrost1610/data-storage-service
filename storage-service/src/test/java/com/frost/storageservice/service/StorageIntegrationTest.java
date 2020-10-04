@@ -67,58 +67,22 @@ public class StorageIntegrationTest {
 		Mockito.when(cryptoService.encrypt(ArgumentMatchers.anyString())).thenAnswer(arg -> arg.getArgument(0));
 		Mockito.when(cryptoService.decrypt(ArgumentMatchers.anyString())).thenAnswer(arg -> arg.getArgument(0));
 
-		// Add two records to CSV File
-
-		List<DataModelProto> datasForCSV = new ArrayList<>();
-		datasForCSV.add(createTestDataModel("TestUser1", "1993-10-01", "10000"));
-		datasForCSV.add(createTestDataModel("TestUser2", "1997-10-12", "35000"));
-
-		DocumentDetailsProto csvPayloadData = DocumentDetailsProto.newBuilder().setType("csv").addAllDatas(datasForCSV)
-				.build();
-
-		dataProcessor.addData(csvPayloadData);
-
-		// Add three records to XML File
-
-		List<DataModelProto> datasForXML = new ArrayList<>();
-		datasForXML.add(createTestDataModel("TestUser3", "1996-10-01", "20000"));
-		datasForXML.add(createTestDataModel("TestUser4", "1999-10-12", "45000"));
-		datasForXML.add(createTestDataModel("TestUser5", "2005-03-09", "80000"));
-
-		DocumentDetailsProto xmlPayloadData = DocumentDetailsProto.newBuilder().setType("xMl").addAllDatas(datasForXML)
-				.build();
-
-		dataProcessor.addData(xmlPayloadData);
+		// Add two records to CSV File and three records to XML File
+		addTwoRecordToCSV();
+		addThreeRecordsToXML();
 
 		// Read all Data and verify
-
 		Documents documents = documentService.getAllData();
 
 		Assert.assertEquals(2, documents.getCsvDocument().getSize());
 		Assert.assertEquals(3, documents.getXmlDocument().getSize());
 
-		// Add one more records to CSV File
+		// Add one more records to CSV File and two more records to XML File
 
-		List<DataModelProto> datasForCSV2 = new ArrayList<>();
-		datasForCSV2.add(createTestDataModel("TestUser3", "1993-07-12", "80000"));
+		addOneRecordToCSV();
+		addTwoRecordsToXML();
 
-		DocumentDetailsProto csvPayloadData2 = DocumentDetailsProto.newBuilder().setType("csv")
-				.addAllDatas(datasForCSV2).build();
-
-		dataProcessor.addData(csvPayloadData2);
-
-		// Add two more records to XML File
-
-		List<DataModelProto> datasForXML2 = new ArrayList<>();
-		datasForXML2.add(createTestDataModel("TestUser6", "1987-12-07", "60000"));
-		datasForXML2.add(createTestDataModel("TestUser7", "1967-04-11", "85000"));
-
-		DocumentDetailsProto xmlPayloadData2 = DocumentDetailsProto.newBuilder().setType("xMl")
-				.addAllDatas(datasForXML2).build();
-
-		dataProcessor.addData(xmlPayloadData2);
-
-		// Read all Data and verify
+		// Read new Data and verify
 
 		Documents documents2 = documentService.getAllData();
 
@@ -133,12 +97,7 @@ public class StorageIntegrationTest {
 		String csvSalaryUpdated = "90000";
 		String csvDobUpdated = "1995-07-12";
 
-		DataModelProto csvProtoToUpdate = DataModelProto.newBuilder().setId(csvIdToBeUpdated).setName(csvNameUpdated)
-				.setSalary(csvSalaryUpdated).setDob(csvDobUpdated).build();
-		DocumentDetailsProto csvPayloadData3 = DocumentDetailsProto.newBuilder().setType("csv")
-				.addDatas(csvProtoToUpdate).build();
-
-		dataProcessor.updateData(csvPayloadData3);
+		updateRecordInCSV(csvIdToBeUpdated, csvNameUpdated, csvSalaryUpdated, csvDobUpdated);
 
 		// Update records in XML
 
@@ -148,14 +107,9 @@ public class StorageIntegrationTest {
 		String xmlSalaryUpdated = "46000";
 		String xmlDobUpdated = "1957-10-12";
 
-		DataModelProto xmlProtoToUpdate = DataModelProto.newBuilder().setId(xmlIdToBeUpdated).setName(xmlNameUpdated)
-				.setSalary(xmlSalaryUpdated).setDob(xmlDobUpdated).build();
-		DocumentDetailsProto xmlPayloadData3 = DocumentDetailsProto.newBuilder().setType("xml")
-				.addDatas(xmlProtoToUpdate).build();
+		updateRecordInXml(xmlIdToBeUpdated, xmlNameUpdated, xmlSalaryUpdated, xmlDobUpdated);
 
-		dataProcessor.updateData(xmlPayloadData3);
-
-		// Read all Data and verify
+		// Read Updated Data and verify
 
 		Documents updatedDocuments = documentService.getAllData();
 
@@ -179,6 +133,100 @@ public class StorageIntegrationTest {
 
 		});
 
+	}
+
+	/**
+	 * @param xmlIdToBeUpdated
+	 * @param xmlNameUpdated
+	 * @param xmlSalaryUpdated
+	 * @param xmlDobUpdated
+	 */
+	private void updateRecordInXml(String xmlIdToBeUpdated, String xmlNameUpdated, String xmlSalaryUpdated,
+			String xmlDobUpdated) {
+
+		DataModelProto xmlProtoToUpdate = DataModelProto.newBuilder().setId(xmlIdToBeUpdated).setName(xmlNameUpdated)
+				.setSalary(xmlSalaryUpdated).setDob(xmlDobUpdated).build();
+		DocumentDetailsProto xmlPayloadData3 = DocumentDetailsProto.newBuilder().setType("xml")
+				.addDatas(xmlProtoToUpdate).build();
+
+		dataProcessor.updateData(xmlPayloadData3);
+	}
+
+	/**
+	 * @param csvIdToBeUpdated
+	 * @param csvNameUpdated
+	 * @param csvSalaryUpdated
+	 * @param csvDobUpdated
+	 */
+	private void updateRecordInCSV(String csvIdToBeUpdated, String csvNameUpdated, String csvSalaryUpdated,
+			String csvDobUpdated) {
+
+		DataModelProto csvProtoToUpdate = DataModelProto.newBuilder().setId(csvIdToBeUpdated).setName(csvNameUpdated)
+				.setSalary(csvSalaryUpdated).setDob(csvDobUpdated).build();
+		DocumentDetailsProto csvPayloadData3 = DocumentDetailsProto.newBuilder().setType("csv")
+				.addDatas(csvProtoToUpdate).build();
+
+		dataProcessor.updateData(csvPayloadData3);
+	}
+
+	/**
+	 * 
+	 */
+	private void addTwoRecordsToXML() {
+
+		List<DataModelProto> datasForXML2 = new ArrayList<>();
+		datasForXML2.add(createTestDataModel("TestUser6", "1987-12-07", "60000"));
+		datasForXML2.add(createTestDataModel("TestUser7", "1967-04-11", "85000"));
+
+		DocumentDetailsProto xmlPayloadData2 = DocumentDetailsProto.newBuilder().setType("xMl")
+				.addAllDatas(datasForXML2).build();
+
+		dataProcessor.addData(xmlPayloadData2);
+	}
+
+	/**
+	 * 
+	 */
+	private void addOneRecordToCSV() {
+
+		List<DataModelProto> datasForCSV2 = new ArrayList<>();
+		datasForCSV2.add(createTestDataModel("TestUser3", "1993-07-12", "80000"));
+
+		DocumentDetailsProto csvPayloadData2 = DocumentDetailsProto.newBuilder().setType("csv")
+				.addAllDatas(datasForCSV2).build();
+
+		dataProcessor.addData(csvPayloadData2);
+	}
+
+	/**
+	 * 
+	 */
+	private void addThreeRecordsToXML() {
+
+		List<DataModelProto> datasForXML = new ArrayList<>();
+		datasForXML.add(createTestDataModel("TestUser3", "1996-10-01", "20000"));
+		datasForXML.add(createTestDataModel("TestUser4", "1999-10-12", "45000"));
+		datasForXML.add(createTestDataModel("TestUser5", "2005-03-09", "80000"));
+
+		DocumentDetailsProto xmlPayloadData = DocumentDetailsProto.newBuilder().setType("xMl").addAllDatas(datasForXML)
+				.build();
+
+		dataProcessor.addData(xmlPayloadData);
+	}
+
+	/**
+	 * 
+	 */
+	private void addTwoRecordToCSV() {
+
+		List<DataModelProto> datasForCSV = new ArrayList<>();
+		datasForCSV.add(createTestDataModel("TestUser1", "1993-10-01", "10000"));
+		datasForCSV.add(createTestDataModel("TestUser2", "1997-10-12", "35000"));
+
+		DocumentDetailsProto csvPayloadData = DocumentDetailsProto.newBuilder().setType("csv").addAllDatas(datasForCSV)
+				.build();
+
+		dataProcessor.addData(csvPayloadData);
 	}
 
 	/**
