@@ -63,7 +63,7 @@ services:
       - kafka
     volumes:
       - type: bind
-        source: ./file-storage/
+        source: ${FILE_STORAGE_PATH}
         target: /storage
     ports:
       - "8082:8082"
