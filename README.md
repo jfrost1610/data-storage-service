@@ -16,7 +16,8 @@ There are three components to this service:
 The docker-compose.yml is configured to setup one Zookeeper, one Kafka broker and the Schema Registry.
 Then it runs maven install on the DocumentService and StorageService microservices and brings them up.
 
-Use the below command to bring the services up.
+Navigate to the root of the directory where the source code has been checked out, where the docker-compose.yml can be found.
+Then run the below command to bring the services up.
 
 ```
 docker-compose up -d
@@ -57,8 +58,11 @@ There are three APIs being exposed by the DocumentService on port 8081.
 2. UpdateData   -  POST localhost:8081/data
 3. GetData      -  GET  localhost:8081/data
 
-Import the postman collection **DataStorage_APIs.postman_collection.json** present at **data-storage-service/postman-api** of the source code to test these APIs.
-Or use the below sample cURL commands:
+If using Postman, import the postman collection **DataStorage_APIs.postman_collection.json** present at **data-storage-service/postman-api** of the source code to test these APIs. Get Postman [here](https://www.postman.com/downloads/).
+
+Choose the file type where data has to be added or updated by passing a header 'fileType' with value as either 'CSV' or 'XML'.
+
+Or use the sample cURL commands provided below:
 
 AddData:
 
