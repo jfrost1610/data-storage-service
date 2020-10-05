@@ -5,7 +5,6 @@ This Service provides APIs to add, update or read Data from either a CSV or XML 
 
 ## Installation Guide
 
-This project has been written to be tested with minimal setup.
 Docker is required to be running in your system to run the docker-compose file. Get Docker for Windows [here](https://docs.docker.com/docker-for-windows/install/)
 
 There are three components to this service:
