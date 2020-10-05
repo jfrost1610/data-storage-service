@@ -16,7 +16,8 @@ There are three components to this service:
 The docker-compose.yml is configured to setup one Zookeeper, one Kafka broker and the Schema Registry.
 Then it runs maven install on the DocumentService and StorageService microservices and brings them up.
 
-Use the below command to bring the services up.
+Navigate to the root of the directory where the source code has been checked out, where the docker-compose.yml can be found.
+Then run the below command to bring the services up.
 
 ```
 docker-compose up -d
