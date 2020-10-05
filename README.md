@@ -59,7 +59,8 @@ There are three APIs being exposed by the DocumentService on port 8081.
 3. GetData      -  GET  localhost:8081/data
 
 Import the postman collection **DataStorage_APIs.postman_collection.json** present at **data-storage-service/postman-api** of the source code to test these APIs.
-Or use the below sample cURL commands:
+Or use the sample cURL commands provided below. 
+Choose the file type where data has to be added or updated by passing a header 'fileType' with value as either 'CSV' or 'XML'.
 
 AddData:
 
