@@ -31,6 +31,15 @@ public class DataTransformationService {
 	@Autowired
 	private CryptoService cryptoService;
 
+	/**
+	 * Encrypts the data in the payload and them transforms to
+	 * {@link DocumentDetailsProto}
+	 * 
+	 * @param payload
+	 *            the data to encrypt and transform
+	 * @return payload with data encrypted and transfomed to proto
+	 *         {@link DocumentDetailsProto}
+	 */
 	public DocumentDetailsProto encryptAndConvertToProto(DocumentDetails payload) {
 
 		Builder builder = DocumentDetailsProto.newBuilder().setSize(payload.getSize());
@@ -46,6 +55,11 @@ public class DataTransformationService {
 		return builder.build();
 	}
 
+	/**
+	 * 
+	 * @param datas
+	 * @return
+	 */
 	private Iterable<? extends DataModelProto> convertToDataModelProtos(List<DataModel> datas) {
 
 		return datas.stream().filter(Objects::nonNull).map(data -> {
@@ -74,6 +88,12 @@ public class DataTransformationService {
 		}).collect(Collectors.toList());
 	}
 
+	/**
+	 * Method that calls the cryptoService to decrypt the data in {@link Documents}
+	 * 
+	 * @param documents
+	 * @return documents with the data decrypted.
+	 */
 	public Documents decryptDocumentDatas(Documents documents) {
 
 		log.info("Starting to decrypt DocumentDatas: {}", documents);

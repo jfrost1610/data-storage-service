@@ -46,6 +46,16 @@ public class DataController {
 
 	private static final List<String> validFileTypes = Arrays.asList("CSV", "XML");
 
+	/**
+	 * Rest endpoint to add data to a data file
+	 * 
+	 * @param fileType
+	 *            header that identifies the type of data file to add data to.
+	 *            Supports CSV and XML
+	 * @param datas
+	 *            the list of {@link DataModel} to add to the data file
+	 * @return
+	 */
 	@PutMapping
 	public @ResponseBody ResponseEntity<String> createData(
 			@RequestHeader(value = "fileType", required = true) String fileType,
@@ -59,6 +69,16 @@ public class DataController {
 
 	}
 
+	/**
+	 * Rest endpoint to update data in a data file
+	 * 
+	 * @param fileType
+	 *            header that identifies the type of data file to update data in.
+	 *            Supports CSV and XML
+	 * @param datas
+	 *            the list of {@link DataModel} to be updated in the data file
+	 * @return
+	 */
 	@PostMapping
 	public @ResponseBody ResponseEntity<String> updateData(
 			@RequestHeader(value = "fileType", required = true) String fileType,
@@ -74,6 +94,11 @@ public class DataController {
 
 	}
 
+	/**
+	 * Rest endpoint to fetch data from all the datafiles ie. CSV and XML Data file
+	 * 
+	 * @return
+	 */
 	@GetMapping
 	public @ResponseBody ResponseEntity<Documents> getData() {
 
@@ -88,6 +113,8 @@ public class DataController {
 	}
 
 	/**
+	 * Validates the fileType Header
+	 * 
 	 * @param fileType
 	 * @throws ValidationException
 	 */
@@ -106,6 +133,11 @@ public class DataController {
 
 	}
 
+	/**
+	 * Validates id field on DataModels to be updated
+	 * 
+	 * @param datas
+	 */
 	private void idValidation(List<DataModel> datas) {
 
 		Map<String, String> errorMap = new HashMap<>();

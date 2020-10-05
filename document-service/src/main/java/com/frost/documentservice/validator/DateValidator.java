@@ -11,6 +11,8 @@ import javax.validation.ConstraintValidatorContext;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * Validator that the Date is a valid LocalDate.
+ * 
  * @author jobin
  *
  */

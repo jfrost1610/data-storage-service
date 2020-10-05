@@ -18,7 +18,7 @@ server:
 
 feign:
   apis:
-    document: http://localhost:8080
+    storage: http://localhost:8080
     
 aes:
   secret: test-secret

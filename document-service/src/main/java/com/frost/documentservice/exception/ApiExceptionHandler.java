@@ -32,6 +32,9 @@ import com.frost.documentservice.model.ApiError;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * ControllerAdvice that provides custom error response in case of any
+ * Exceptions thrown by the Rest Controllers.
+ * 
  * @author jobin
  *
  */
@@ -57,6 +60,9 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 	@Override
 	protected ResponseEntity<Object> handleServletRequestBindingException(ServletRequestBindingException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
+
+		log.error("ServletRequestBindingException Occured!", ex);
+
 		ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getMessage());
 		return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
 	}

@@ -6,10 +6,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.frost.documentservice.model.Documents;
 
-@FeignClient(name = "documentAPI", url = "${feign.apis.document}")
+/**
+ * Feign client that provides method to connect to the APIs provided by storage
+ * service
+ * 
+ * @author jobin
+ *
+ */
+@FeignClient(name = "storageAPI", url = "${feign.apis.storage}")
 @RequestMapping("/document")
 public interface DocumentClient {
 
+	/**
+	 * Called the storageAPIs Restful endppoint to fetch all data.
+	 * 
+	 * @return {@link Documents}
+	 */
 	@GetMapping
 	public Documents getAllData();
 

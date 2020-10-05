@@ -12,6 +12,8 @@ import javax.validation.ConstraintValidatorContext;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * Validator that checks if the DOB is above a certain age as defined in minAge.
+ * 
  * @author jobin
  *
  */

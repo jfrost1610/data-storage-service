@@ -20,6 +20,9 @@ import io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializer;
 import io.confluent.kafka.serializers.protobuf.KafkaProtobufSerializerConfig;
 
 /**
+ * Provides Kafka Producer Configuration to publish Messages that uses the
+ * {@link KafkaProtobufSerializer} to serialize the payload into ProtoBuf.
+ * 
  * @author jobin
  *
  */

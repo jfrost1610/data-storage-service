@@ -18,6 +18,8 @@ import org.springframework.stereotype.Service;
 import com.frost.documentservice.exception.EncryptionException;
 
 /**
+ * Provides methods to encrypt/decrypt a string using AES
+ * 
  * @author jobin
  *
  */
@@ -43,6 +45,13 @@ public class CryptoService {
 
 	}
 
+	/**
+	 * Encrypts the strToEncrypt using the injected AES key
+	 * 
+	 * @param strToEncrypt
+	 *            the data to encrypt
+	 * @return the encrypted string
+	 */
 	public String encrypt(String strToEncrypt) {
 		try {
 
@@ -57,6 +66,13 @@ public class CryptoService {
 		}
 	}
 
+	/**
+	 * Decrypts the strToDecrypt using the injected AES key
+	 * 
+	 * @param strToDecrypt
+	 *            the data to decrypt
+	 * @return the decrypted string
+	 */
 	public String decrypt(String strToDecrypt) {
 
 		try {
