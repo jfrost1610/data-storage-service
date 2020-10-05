@@ -23,6 +23,9 @@ import com.opencsv.CSVWriter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * {@link DataWriter} implementation that provides methods to write, update and
+ * read data from the CSV DataFile.
+ * 
  * @author jobin
  *
  */

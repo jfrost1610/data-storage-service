@@ -20,6 +20,13 @@ import com.frost.storageservice.protobuf.DocumentProtos.DocumentDetailsProto;
 import io.confluent.kafka.serializers.protobuf.KafkaProtobufDeserializer;
 import io.confluent.kafka.serializers.protobuf.KafkaProtobufDeserializerConfig;
 
+/**
+ * Provides Kafka Consumer Configuration to receive Messages that uses the
+ * {@link KafkaProtobufDeserializer} to deserialize the ProtoBuf payload.
+ * 
+ * @author jobin
+ *
+ */
 @EnableKafka
 @Configuration
 public class KafkaConfig {

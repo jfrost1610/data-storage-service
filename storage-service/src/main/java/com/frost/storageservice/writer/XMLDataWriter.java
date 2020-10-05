@@ -29,6 +29,9 @@ import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * {@link DataWriter} implementation that provides methods to write, update and
+ * read data from the XML DataFile.
+ * 
  * @author jobin
  *
  */

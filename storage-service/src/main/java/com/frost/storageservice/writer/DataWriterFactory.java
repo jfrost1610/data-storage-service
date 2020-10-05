@@ -8,6 +8,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 /**
+ * Factory that returns instances of DataWriter using the BeanName.
+ * 
  * @author jobin
  *
  */

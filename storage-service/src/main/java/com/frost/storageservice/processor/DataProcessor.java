@@ -13,6 +13,9 @@ import com.frost.storageservice.service.DocumentService;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * Class that provides Kafka Listeners that processes messages received by the
+ * Kafka create and update topics.
+ * 
  * @author jobin
  *
  */
@@ -23,6 +26,11 @@ public class DataProcessor {
 	@Autowired
 	private DocumentService documentService;
 
+	/**
+	 * Kafka listener to process messages to Add Data to the Data File.
+	 * 
+	 * @param message
+	 */
 	@KafkaListener(topics = "${kafka.topic.create}")
 	public void addData(DocumentDetailsProto message) {
 
@@ -34,6 +42,11 @@ public class DataProcessor {
 
 	}
 
+	/**
+	 * Kafka listener to process messages to Update Data to the Data File.
+	 * 
+	 * @param message
+	 */
 	@KafkaListener(topics = "${kafka.topic.update}")
 	public void updateData(DocumentDetailsProto message) {
 

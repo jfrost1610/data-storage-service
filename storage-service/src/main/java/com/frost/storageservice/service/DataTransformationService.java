@@ -23,6 +23,14 @@ public class DataTransformationService {
 	@Autowired
 	private CryptoService cryptoService;
 
+	/**
+	 * Method that calls the cryptoService to decrypt the data in
+	 * {@link DocumentDetailsProto}
+	 * 
+	 * @param documentDetailsProto
+	 * 
+	 * @return
+	 */
 	public DocumentDetails parseAndDecryptDocumentProto(DocumentDetailsProto documentDetailsProto) {
 
 		DocumentDetails documentDetails = new DocumentDetails(documentDetailsProto);
@@ -37,6 +45,14 @@ public class DataTransformationService {
 		return documentDetails;
 	}
 
+	/**
+	 * Method that calls the cryptoService to encrypt the data in csvDocument and
+	 * xmlDocument and then transforms them to {@link Documents}
+	 * 
+	 * @param csvDocument
+	 * @param xmlDocument
+	 * @return
+	 */
 	public Documents encryptAndConvertToDocuments(DocumentDetails csvDocument, DocumentDetails xmlDocument) {
 		return new Documents(encryptDocumentDetails(csvDocument), encryptDocumentDetails(xmlDocument));
 	}

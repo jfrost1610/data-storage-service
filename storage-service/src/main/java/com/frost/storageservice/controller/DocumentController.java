@@ -30,6 +30,11 @@ public class DocumentController {
 	@Autowired
 	private DocumentService documentService;
 
+	/**
+	 * Rest endpoint to fetch data from all the datafiles ie. CSV and XML Data file
+	 * 
+	 * @return
+	 */
 	@GetMapping
 	public @ResponseBody ResponseEntity<Documents> readData() throws IOException {
 
